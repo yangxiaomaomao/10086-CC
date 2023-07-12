@@ -1,0 +1,1 @@
+cmd_/home/yangxiaomao/10086/bbr/Module.symvers := sed 's/ko$$/o/' /home/yangxiaomao/10086/bbr/modules.order | scripts/mod/modpost -m -a  -o /home/yangxiaomao/10086/bbr/Module.symvers -e -i Module.symvers   -T -

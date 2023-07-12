@@ -1,0 +1,1 @@
+cmd_/home/yangxiaomao/10086/bbr_plus/tcp_bbr_plus.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/yangxiaomao/10086/bbr_plus/tcp_bbr_plus.ko /home/yangxiaomao/10086/bbr_plus/tcp_bbr_plus.o /home/yangxiaomao/10086/bbr_plus/tcp_bbr_plus.mod.o;  true
