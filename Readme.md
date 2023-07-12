@@ -29,8 +29,7 @@
 - 使用命令生成`bbr-cwnd.txt`，`sudo python3 cc_test.py --algo bbr -d 50 -bc 1 -j 10`
 - 复现下图中拥塞窗口变化情况
 - 分析原因
-
-![image-20230711225157204](F:\Desktop\江苏移动\BBR\figure\bbr-cwnd.png)
+<img src="figure\bbr-cwnd.png" alt="image-20230711232332812"/>
 
 ### 3.3 在链路状态高速变化时优化`BBR`，将新的拥塞控制方法命名为`bbr_plus`，并嵌入系统
 
@@ -38,11 +37,11 @@
 
 - `bbr`的`PROBE_BW`阶段，2个周期probe可用带宽，6个周期保持现有发送速率，保持现有速率时不能及时探测**已经变化**的可用带宽，下图见`tcp_bbr.c`
 
-  ![image-20230711232832594](F:\Desktop\江苏移动\BBR\figure\bbr-gain.png "BBR中PROBE_BW的gain向量")
+  <img src="figure\bbr-gain.png" alt="image-20230711232332812"/>
 
 - `bbr_plus`的`PROBE_BW`阶段，一直在probe可用带宽，可以**更及时地**探测到当前的可用带宽，从而对链路的利用率更高。下图见`tcp_bbr_plus.c`
 
-<img src="F:\Desktop\江苏移动\BBR\figure\bbr-plus-gain.png" alt="image-20230711232332812" style="zoom:80%;" />
+<img src="figure\bbr-plus-gain.png" alt="image-20230711232332812"/>
 
 #### 实验过程
 
